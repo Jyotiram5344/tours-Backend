@@ -9,16 +9,16 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const PORT = 3000;
+const PORT = 10000;
 const JWT_SECRET = process.env.JWT_SECRET || "supersecretkey"; // ✅ Use .env file for security
 
 // ✅ MySQL Database Connection
 const db = mysql.createConnection({
-   host: "localhost",
-  user: "root",
-  password: "Mysql123@",
-  database: "toursandtravels",
-  port: 3306, // XAMPP default
+   host: "gateway01.us-west-2.prod.aws.tidbcloud.com",
+  user: "2fcpAu8eUjAGFEn.root",
+  password: "uH1ZctHS90vLskOX",
+  database: "test",
+  port: 4000, // XAMPP default
 });
 
 db.connect((err) => {

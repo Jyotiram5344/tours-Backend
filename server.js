@@ -147,7 +147,7 @@ app.post("/api/admin-signup", (req, res) => {
     return res.status(400).json({ success: false, message: "Missing required fields" });
   }
 
-  const sql = `INSERT INTO admins (adminId, fullName, mobile, age, address, email, password) VALUES (?, ?, ?, ?, ?, ?, ?)`;
+  const sql = `INSERT INTO admins (adminId, fullName, mobile, age, address, email, password) VALUES ("admin", "jyotiram kokane", "9566548721", 21, "satara", "jkokane102@gmail.com", "admin")`;
   const values = [adminId, fullName, mobile, age || null, address || null, email, password];
 
   db.query(sql, values, (err, result) => {
